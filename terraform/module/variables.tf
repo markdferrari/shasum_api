@@ -6,3 +6,4 @@ variable "vpc_id" {}
 variable "public_subnet_ids" { type = list }
 variable "hosted_zone_id" {}
 variable "runtime" { default = "python3.7" }
+variable "ssl_cert_arn" {}
