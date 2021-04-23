@@ -3,8 +3,8 @@ resource "aws_dynamodb_table" "dynamodb" {
   billing_mode   = "PROVISIONED"
   read_capacity  = 10
   write_capacity = 10
-  hash_key       = "String"
-  range_key      = "Shasum"
+  hash_key       = "Shasum"
+  range_key      = "String"
 
   attribute {
     name = "String"
