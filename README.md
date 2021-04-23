@@ -4,13 +4,13 @@
 /encrypt takes a json payload, see example `encrypt_payload` in api/
 
 ```bash
-curl --header "Content-Type: application/json" -x POST -d '{"String": "$insertanyvalue"} http://api.mark-ferrari.com/encrypt/encrypt
+curl --header "Content-Type: application/json" -X POST -d '{"String": "dummy"}' https://api.mark-ferrari.com/encrypt/encrypt
 ```
 
 /decrypt is similar but pass in the known shasum and it will return a match.
 
 ```bash
-curl --header "Content-Type: application/json" -x POST -d '{"Shasum": "$known_shasum"} http://api.mark-ferrari.com/
+curl --header "Content-Type: application/json" -X POST -d '{"Shasum": "b5a2c96250612366ea272ffac6d9744aaf4b45aacd96aa7cfcb931ee3b558259"}' https://api.mark-ferrari.com/
 ```
 
 ## Known issues
