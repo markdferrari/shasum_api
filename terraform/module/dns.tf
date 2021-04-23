@@ -1,11 +1,12 @@
-resource "aws_route53_record" "alb" {
+resource "aws_route53_record" "api_gateway" {
   zone_id = var.hosted_zone_id
-  name    = var.alb_dns_record
+  name    = var.api_gateway_dns_record
   type    = "A"
 
   alias {
-    name                   = aws_alb.alb.dns_name
-    zone_id                = aws_alb.alb.zone_id
-    evaluate_target_health = true
+    name                   = var.api_gateway_endpoint
+    zone_id                = "ZLY8HYME6SFDD"
+    evaluate_target_health = false
   }
 }
+

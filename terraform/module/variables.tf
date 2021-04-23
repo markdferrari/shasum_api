@@ -1,5 +1,5 @@
-variable "alb_name" { default = "shasum" }
-variable "alb_dns_record" { default = "shasum-api" }
+variable "api_gateway_dns_record" { default = "api" }
+variable "api_gateway_endpoint" { default = "d-qg8j337jka.execute-api.eu-west-1.amazonaws.com." }
 variable "dynamodb_table_name" { default = "main" }
 variable "environment" { default = "test" }
 variable "vpc_id" {}

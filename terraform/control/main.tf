@@ -7,15 +7,15 @@ module "api" {
 }
 
 module "encrypt_api" {
-  source = "../api_gateway"
-  api_name = "encrypt"
-  path_part = "encrypt"
+  source     = "../api_gateway"
+  api_name   = "encrypt"
+  path_part  = "encrypt"
   lambda_arn = module.api.encrypt_lambda_arn
 }
 
 module "decrypt_api" {
-  source = "../api_gateway"
-  api_name = "decrypt"
-  path_part = "decrypt"
+  source     = "../api_gateway"
+  api_name   = "decrypt"
+  path_part  = "decrypt"
   lambda_arn = module.api.decrypt_lambda_arn
 }
